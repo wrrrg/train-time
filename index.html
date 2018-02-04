@@ -14,7 +14,7 @@
     <section>
       <h3>Current Train Schedule</h3>
 
-      <table>
+      <table id="train-table">
         <thead>
           <tr>
             <th>Train Name</th>
@@ -31,25 +31,26 @@
 
     <section>
       <h3>Add a new Train</h3>
-      <form id="add-train" action="index.html" method="post">
+      <div class="form" id="add-train" action="index.html" method="post">
         <label for="name">Train Name</label>
         <input type="text" name="name" value="" id='train-name-input'>
         <label for="destination">Destination</label>
         <input type="text" name="destination" value="" id='train-dest-input'>
         <label for='first-train-time'>First Train Time (HH:mm - military time)</label>
-        <input type="number" name="" value="" id='first-train-input'>
+        <input type="number" name="" value="" id='train-start-input'>
         <label for="frequency">Frequency (min)</label>
-        <input type="number" name="" value="">
-        <input type="submit" name="Submit" value="Add Train" id="train-submit-input">
-      </form>
+        <input type="number" name="" value="" id="train-frequency-input">
+        <input type="submit" name="Submit" value="Add Train" id="add-train-input">
+      </div>
     </section>
 
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/af.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
   </body>
 </html>
