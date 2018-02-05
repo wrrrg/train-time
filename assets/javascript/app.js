@@ -12,6 +12,10 @@ $(document).ready(function() {
 
   var database = firebase.database();
 
+// Show current time as of page load
+  var timeRightNow = moment();
+  $("#current-time").text((moment(timeRightNow).format("HH:mm")));
+
 
 // The button to add Trains
 
