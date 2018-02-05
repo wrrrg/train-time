@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Trains on Time</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
     <header>
@@ -36,8 +37,8 @@
         <input type="text" name="name" value="" id='train-name-input'>
         <label for="destination">Destination</label>
         <input type="text" name="destination" value="" id='train-dest-input'>
-        <label for='first-train-time'>First Train Time (HH:mm - military time)</label>
-        <input type="number" name="" value="" id='train-start-input'>
+        <label for='first-train-time'>First Train Time (please enter "HH:mm" - military time)</label>
+        <input type="text" name="" value="" id='train-start-input'>
         <label for="frequency">Frequency (min)</label>
         <input type="number" name="" value="" id="train-frequency-input">
         <input type="submit" name="Submit" value="Add Train" id="add-train-input">
@@ -49,7 +50,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 
   </body>

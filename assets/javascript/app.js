@@ -47,6 +47,7 @@ $("#add-train-input").on("click", function(event) {
   $("#train-frequency-input").val("");
 });
 
+//  Snapshot
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
   console.log(childSnapshot.val());
@@ -61,9 +62,41 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   console.log(trainStart);
   console.log(trainFrequency);
 
+  // Let's do some Math
+
+  var currentTime = moment();
+  console.log("This is the moment js time: " + moment(currentTime).format("HH:mm"));
+
+  var startConvert = moment(trainStart, "HH:mm").subtract(1, "years");
+  console.log("This is the start time through moment.js: " + moment(startConvert).format("HH:mm"));
+
+  var diffTime = moment().diff(moment(startConvert), "minutes");
+  console.log("Difference between these: " + diffTime);
+
+  var tRemainder = diffTime % trainFrequency;
+  console.log(tRemainder);
+
+  var tMinutesTilTrain = trainFrequency - tRemainder;
+  console.log("Minutes until train: " + tMinutesTilTrain);
+
+  var nextTrain = moment().add(tMinutesTilTrain, "minutes");
+  console.log("Next Train Arrives at: " + moment(nextTrain).format("HH:mm"));
+
+
+
   $("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDest + "</td><td>" +
-  trainStart + "</td><td>" + trainFrequency + "</td><td>" + "</td></tr>");
-})
+  trainFrequency + "</td><td>" + moment(nextTrain).format("HH:mm") + "</td><td>" + tMinutesTilTrain + "</td></tr>");
+});
+
+convertMilitaryToMinutes = function(time){
+  var minutes = (time.hour()*60) + time.minute();
+  return minutes
+};
+
+// getMomentFromString = function(str){
+//   var t = moment(str, 'HH:MM a');
+//   return t;
+// };
 
 
 
