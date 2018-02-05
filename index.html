@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <title>Trains on Time</title>
     <link rel="stylesheet" href="assets/css/style.css">
+     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
     <header>
-      <h1>Train's coming.</h1>
-      <h3>Keep it on time!</h3>
+      <h1 class="header-text">Train's coming.</h1>
+      <h3 class="header-text">Keep it on time!</h3>
     </header>
 
-    <section>
-      <h3>Current Train Schedule</h3>
+    <section class="train-schedule">
+      <h3>Current Train Schedule <span id="current time"></span></h3>
 
       <table id="train-table">
         <thead>
@@ -30,9 +31,9 @@
       </table>
     </section>
 
-    <section>
+    <section class="train-add">
       <h3>Add a new Train</h3>
-      <div class="form" id="add-train" action="index.html" method="post">
+      <form class="form" id="add-train" action="index.html" method="post">
         <label for="name">Train Name</label>
         <input type="text" name="name" value="" id='train-name-input'>
         <label for="destination">Destination</label>
@@ -42,7 +43,7 @@
         <label for="frequency">Frequency (min)</label>
         <input type="number" name="" value="" id="train-frequency-input">
         <input type="submit" name="Submit" value="Add Train" id="add-train-input">
-      </div>
+      </form>
     </section>
 
     <script

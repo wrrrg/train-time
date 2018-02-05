@@ -1,0 +1,93 @@
+body {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: "Droid Serif", serif;
+  font-size: 16px;
+  color: #2f2f2f;
+  background-color: #f9f7f1;
+}
+
+header {
+  text-align: center;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+/* Body CSS */
+section {
+  border: 1px solid black;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+}
+
+section h3 {
+  margin-top: 0px;
+  background: #2f2f2f;
+  color: #f9f7f1;
+  font-size: 24px;
+  padding: 2px 7px;
+}
+
+/* Table CSS */
+
+#train-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th {
+  font-style: italic;
+}
+
+td, th {
+  border-bottom: black 1px solid;
+  padding: 6px;
+  line-height: 1.5;
+}
+
+.t-dest {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Input CSS */
+
+form input {
+  display: block;
+  width: 95%;
+  margin: 10px auto;
+  color: #2f2f2f;
+  background-color: #f9f7f1;
+  border: none;
+}
+
+form input:hover {
+  background: white;
+  border: 1px dashed black;
+}
+
+form input:focus {
+  background: white;
+}
+
+label {
+  width: 95%;
+  margin-left: 2.5%;
+  font-style: italic;
+  font-size: 18px;
+}
+
+#add-train-input {
+  width: 35%;
+  margin: 0 auto;
+  background: #2f2f2f;
+  color: #f9f7f1;
+  font-style: italic;
+  font-size: 18px;
+  padding: 5px;
+}
